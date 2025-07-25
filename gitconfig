@@ -1,0 +1,9 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	l = log --pretty=oneline --graph -20
+[core]
+	editor = code --wait
+	# excludesFile = ~/.gitignore

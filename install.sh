@@ -7,4 +7,5 @@ ln -s $(pwd)/zsh/p10k.zsh ~/.p10k.zsh
 ln -s $(pwd)/zsh/zshrc ~/.zshrc
 
 # git
-ln -s $(pwd)/git/gitconfig ~/.gitconfig
+echo "[include]" >> ~/.gitconfig
+echo "    path = \"$(pwd)/git/gitconfig\"" >> ~/.gitconfig

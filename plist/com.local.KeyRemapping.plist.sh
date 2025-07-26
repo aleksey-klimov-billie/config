@@ -1,0 +1,1 @@
+ln -s ./com.local.KeyRemapping.plist ~/Library/LaunchAgents/com.local.KeyRemapping.plist

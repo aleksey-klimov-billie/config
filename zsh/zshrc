@@ -1,0 +1,48 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
+# autosuggestions
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#8caab3'
+# zsh-syntax-highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_STYLES[unknown-token]='none'
+
+# macos cursor
+bindkey "^[[1;9D" beginning-of-line
+bindkey "^[[1;9C" end-of-line
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;3C" forward-word
+bindkey '^U' backward-kill-line
+
+## ls
+PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+alias ls="ls -Alh --group-directories-first --color"
+
+## aliases
+alias z="source ~/.zshrc"
+alias timestamp="date +%s | tr -d \"\n\""
+alias uuidgen="uuidgen | tr '[:upper:]' '[:lower:]' | tr -d \"\n\""
+alias storm="open -na \"PhpStorm.app\" --args \"$@\""
+alias dc="docker compose"
+alias dcr="dc down && dc up -d && dc ps"
+#alias php84="brew unlink php@8.1 && brew link php@8.4"
+#alias php81="brew unlink php@8.4 && brew link php@8.1"

@@ -1,6 +1,7 @@
 # system
 brew "coreutils"
 brew "wget"
+brew "tree"
 
 # terminal, zsh
 cask "alacritty"
@@ -9,8 +10,12 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "powerlevel10k"
 
-# Ambitious Vim-fork focused on extensibility and agility
+# tmux
+brew "tmux"
+
+# vim
 brew "neovim"
+brew "ripgrep"
 
 # cask "bruno"
 # brew "mariadb@10.11"

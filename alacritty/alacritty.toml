@@ -24,3 +24,9 @@ size = 13
 key = "Back"
 mods = "Command"
 chars = "\u0015"
+
+# theme
+[colors.cursor]
+text = "#011423"
+cursor = "#47FF9C"
+

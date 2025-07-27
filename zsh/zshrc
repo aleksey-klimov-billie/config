@@ -25,6 +25,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#8caab3'
 # zsh-syntax-highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_STYLES[unknown-token]='none'
+# disable underline path ls ~/.zshrc
+ZSH_HIGHLIGHT_STYLES[path]=none
 
 # macos cursor
 bindkey "^[[1;9D" beginning-of-line

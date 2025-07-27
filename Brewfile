@@ -2,6 +2,7 @@
 brew "coreutils"
 brew "wget"
 brew "tree"
+brew "eza"
 
 # terminal, zsh
 cask "alacritty"

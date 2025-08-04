@@ -16,3 +16,7 @@ ln -s $(pwd)/kitty/p10k.zsh ~/.p10k.zsh
 # git
 echo "[include]" >> ~/.gitconfig
 echo "    path = \"$(pwd)/git/gitconfig\"" >> ~/.gitconfig
+
+# karabiner
+mkdir -p ~/.config/karabiner/
+ln -s $(pwd)/karabiner/karabiner.json ~/.config/karabiner/karabiner.json

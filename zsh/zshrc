@@ -35,6 +35,8 @@ bindkey "^[[1;3D" backward-word
 bindkey "^[[1;3C" forward-word
 bindkey '^U' backward-kill-line
 
+export WORDCHARS='*?_.[]~&;!#$%^(){}<>'
+
 ## ls
 PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 alias ls="ls -Alh --group-directories-first --color"

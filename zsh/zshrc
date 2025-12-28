@@ -47,6 +47,7 @@ alias ls="ls -Alh --group-directories-first --color"
 alias z="source ~/.zshrc"
 alias timestamp="date +%s | tr -d \"\n\""
 alias uuidgen="uuidgen | tr '[:upper:]' '[:lower:]' | tr -d \"\n\""
+alias copylast='history -1 | sed "s/^[ ]*[0-9]*[ ]*//" | tr -d "\n" | pbcopy'
 alias storm="open -na \"PhpStorm.app\" --args \"$@\""
 alias dc="docker compose"
 alias dcr="dc down && dc up -d && dc ps"

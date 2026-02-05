@@ -4,6 +4,7 @@
 	ci = commit
 	st = status
 	l = log --pretty=oneline --graph -20
+	w = worktree
 [core]
 	editor = code --wait
 	# excludesFile = ~/.gitignore
